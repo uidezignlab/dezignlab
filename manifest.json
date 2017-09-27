@@ -19,7 +19,7 @@
     "sizes": "192x192"
   }],
   "start_url": "https://uidezignlab.github.io/dezignlab/",
-  "background_color": "#4285f4",
+  "background_color": "#ffffff",
   "display": "standalone",
   "theme_color": "#2196F3"
 }
