@@ -18,7 +18,7 @@
     "type": "image/png",
     "sizes": "192x192"
   }],
-  "start_url": "index.html",
+  "start_url": "https://uidezignlab.github.io/dezignlab/",
   "background_color": "#4285f4",
   "display": "standalone",
   "theme_color": "#2196F3"
