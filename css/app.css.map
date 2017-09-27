@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA;;GAEG;ACYD,wBAAgE;EAWlE,IAAI;IAEA,KAAK,EAAE,GAAG;;AC3Bd;;GAEG;AACH,IAAK;EACH,gBAAgB,EAAE,OAAO;;AAE3B,0LAA2L;EACzL,WAAW,EAAE,qEAAqE;EAClF,cAAc,EAAE,IAAI;EACpB,KAAK,EAAE,OAAO;;ACThB,aAAa;EACX,KAAK,EAAE,IAAI;EACX,UAAU,EAAE,KAAK;EACjB,UAAU,EAAE,wBAAwB",
+"sources": ["../scss-files/main.scss","../scss-files/_mediaqueries.scss","../scss-files/core.scss","../scss-files/index.scss"],
+"names": [],
+"file": "app.css"
+}

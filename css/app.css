@@ -1,0 +1,24 @@
+/**
+ * Created by Jose Kim on 9/27/2017.
+ */
+@media (max-width: 25em) {
+  .pop {
+    width: 10%; } }
+
+/**
+ * Created by Jose Kim on 9/27/2017.
+ */
+body {
+  background-color: #f2f6f8; }
+
+body, h1, h2, h3, h4, h5, h6, input[type="text"], input[type="password"], input[type="email"], textarea, select, input[type="button"], input[type="submit"], button, span, i, strong, p, a {
+  font-family: "Raleway","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-transform: none;
+  color: #607d8b; }
+
+.index-banner {
+  width: 100%;
+  min-height: 650px;
+  background: url("../img/banner.jpg"); }
+
+/*# sourceMappingURL=app.css.map */
