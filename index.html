@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="#4285f4">
+    <!--<meta name="theme-color" content="#4285f4">-->
+    <link rel="manifest" href="manifest.json">
 
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
@@ -33,6 +34,18 @@
 <!--banner-->
 <div class="index-banner"></div>
 <!--end banner-->
+
+<script>
+    if('serviceWorker' in navigator){
+        window.addEventListener('load', function () {
+            navigator.serviceWorker.register('sw.js').then(function(registration){
+                console.log('Registerred')
+            }, function (err) {
+                console.log('Failde due to', err)
+            })
+        })
+    }
+</script>
 
 </body>
 </html>
