@@ -1,6 +1,185 @@
 .index-banner{
   width: 100%;
-  min-height: 650px;
-  background: url("../img/banner.jpg") no-repeat;
-  background-size: 100% 100%;
+  min-height: 550px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../img/banner.jpg") no-repeat bottom center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  .beacon-ring{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/beac4.png") no-repeat bottom center;
+  }
+}
+.ui-menu{
+  //width: 100%;
+  background: white;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+  .logo{
+    div{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      a{
+        text-decoration: none;
+        display: block;
+        border-radius: inherit;
+        width: 100%;
+        height: 100%;
+        img{
+          width: 100%;
+          border-radius: inherit;
+        }
+      }
+    }
+  }
+  .menu{
+    margin: 0;
+    display: flex;
+    &>li{
+      list-style: none;
+      margin-right: 26px;
+      &>a{
+        text-decoration: none;
+        color: #607d8b;
+        transition: all 500ms;
+        i{
+          color: #607d8b;
+          transition: all 500ms;
+        }
+        &:hover{
+          color: #ff0067;
+          i{
+            color: #ff0067;
+          }
+        }
+      }
+      &.dropdown{
+        position: relative;
+        ul{
+          position: absolute;
+          top: 35px;
+          right: -28px;
+          width: 200px;
+          background: white;
+          border-radius: 6px;
+          padding: 10px 0;
+          box-shadow: 2px 2px 15px -1px grey;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(20px);
+          transition: all 600ms;
+          li{
+            list-style: none;
+            a{
+              display: block;
+              padding: 10px 15px;
+              border-bottom: 1px solid #e8e8e8;
+              text-decoration: none;
+              transition: all 500ms;
+              &:hover{
+                background: whitesmoke;
+              }
+            }
+          }
+          &:before{
+            content: '';
+            position: absolute;
+            top: -15px;
+            right: 8%;
+            width: 0;
+            height: 0;
+            border-bottom: 15px solid white;
+            border-right: 15px solid transparent;
+            border-left: 15px solid transparent;
+          }
+        }
+        &:hover{
+          ul{
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+    @include mq(1080, max){
+      display: none;
+    }
+  }
+  .side-menu-toggle{
+    display: none;
+    color: #607d8b;
+    font:{
+      size: 38px;
+    }
+    cursor: pointer;
+    transition: all 500ms;
+    &:hover{
+      color: #ff0089;
+    }
+    @include mq(1080, max){
+      display: block;
+    }
+  }
+  @include mq($mobile, max){
+    padding: 0 1.5rem;
+  }
+}
+.side-menu{
+  position: fixed;
+  top: 0;
+  left: -245px;
+  width: 220px;
+  height: 100%;
+  z-index: 2000;
+  background: white;
+  box-shadow: 2px 0 15px 1px gray;
+  transition: left 600ms;
+  .side-logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background: whitesmoke;
+    border-bottom: 1px solid lightgrey;
+    a{
+      text-decoration: none;
+      display: block;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      img{
+        width: 100%;
+        border-radius: inherit;
+      }
+    }
+  }
+  .side-menu-c{
+    padding: 0;
+    li{
+      list-style: none;
+      margin: 0;
+      border-bottom: 1px solid #f1f1f1;
+      a{
+        display: block;
+        padding: 13px 13px 13px 35px;
+        text-decoration: none;
+        transition: all 500ms;
+        &:hover{
+          background: whitesmoke;
+        }
+      }
+    }
+  }
+  &.tgg{
+    left: 0;
+  }
 }
