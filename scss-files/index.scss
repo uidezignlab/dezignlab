@@ -1,9 +1,10 @@
 .index-banner{
   width: 100%;
-  min-height: 550px;
+  min-height: 500px;
   background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../img/banner.jpg") no-repeat bottom center;
   background-size: cover;
   position: relative;
+  margin-top: 73px;
   overflow: hidden;
   .beacon-ring{
     position: absolute;
@@ -11,17 +12,97 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("../img/beac4.png") no-repeat bottom center;
+    padding: 0 2rem 2rem 2rem;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../img/beac4.png") no-repeat bottom center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1{
+      text-align: center;
+      color: whitesmoke;
+      font:{
+        family: 'Quicksand', sans-serif;
+        weight: 800;
+      }
+    }
+    p{
+      color: whitesmoke;
+      text-align: center;
+    }
+    .ui-select{
+      width: 100%;
+      padding: 0 14rem;
+      >div{
+        padding: 5px 12px;
+        border-radius: 25px;
+        background: white;
+        display: flex;
+        .sel{
+          flex-basis: 43%;
+          .nice-select{
+            border: none;
+          }
+          select{
+            &.wide{
+              width: 100%;
+            }
+          }
+        }
+        .search-btn{
+          flex-basis: 13%;
+          text-align: center;
+          text-transform: uppercase;
+          border: none;
+          background: transparent;
+          outline: none;
+          cursor: pointer;
+          transition: all 500ms;
+          &:hover{
+            color: #ff0096;
+          }
+        }
+        @include mq(700, max){
+          padding: 15px 12px;
+          border-radius: 2px;
+          display: block;
+          .sel{
+            width: 100%;
+            min-height: 35px;
+            margin-bottom: 1rem;
+          }
+          .search-btn{
+            width: 100%;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+          }
+        }
+      }
+      @include mq(970, max){
+        padding: 0 3rem;
+      }
+      @include mq($mobile, max){
+        padding: 0 0.5rem;
+      }
+    }
+    @include mq($mobile, max){
+      padding: 0 1rem 2rem 1rem;
+    }
   }
 }
 .ui-menu{
-  //width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  width: 100%;
   background: white;
   height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 3rem;
+  box-shadow:0 5px 6px -3px rgba(0, 0, 0, 0.4);
   .logo{
     div{
       width: 40px;
@@ -141,20 +222,18 @@
   height: 100%;
   z-index: 2000;
   background: white;
-  box-shadow: 2px 0 15px 1px gray;
+  box-shadow: 1px 0 15px -1px gray;
   transition: left 600ms;
   .side-logo{
     width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
+    padding: 10px 2rem;
     background: whitesmoke;
     border-bottom: 1px solid lightgrey;
     a{
       text-decoration: none;
       display: block;
-      width: 55px;
-      height: 55px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
       img{
         width: 100%;
@@ -164,6 +243,8 @@
   }
   .side-menu-c{
     padding: 0;
+    position: relative;
+    left: 0;
     li{
       list-style: none;
       margin: 0;

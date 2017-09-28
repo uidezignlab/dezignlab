@@ -13,6 +13,7 @@
 // }
 
 $(document).ready(function(){
+    $('select').niceSelect();
     $('.side-menu-toggle').click(function () {
         $('.side-menu').toggleClass('tgg')
     });
@@ -21,5 +22,5 @@ $(document).ready(function(){
             $('.side-menu').removeClass('tgg')
         }
     });
-})
+});
 

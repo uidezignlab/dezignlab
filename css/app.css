@@ -18,10 +18,11 @@ body, h1, h2, h3, h4, h5, h6, input[type="text"], input[type="password"], input[
 
 .index-banner {
   width: 100%;
-  min-height: 550px;
+  min-height: 500px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/banner.jpg") no-repeat bottom center;
   background-size: cover;
   position: relative;
+  margin-top: 73px;
   overflow: hidden; }
   .index-banner .beacon-ring {
     position: absolute;
@@ -29,15 +30,81 @@ body, h1, h2, h3, h4, h5, h6, input[type="text"], input[type="password"], input[
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("../img/beac4.png") no-repeat bottom center; }
+    padding: 0 2rem 2rem 2rem;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/beac4.png") no-repeat bottom center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .index-banner .beacon-ring h1 {
+      text-align: center;
+      color: whitesmoke;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 800; }
+    .index-banner .beacon-ring p {
+      color: whitesmoke;
+      text-align: center; }
+    .index-banner .beacon-ring .ui-select {
+      width: 100%;
+      padding: 0 14rem; }
+      .index-banner .beacon-ring .ui-select > div {
+        padding: 5px 12px;
+        border-radius: 25px;
+        background: white;
+        display: flex; }
+        .index-banner .beacon-ring .ui-select > div .sel {
+          flex-basis: 43%; }
+          .index-banner .beacon-ring .ui-select > div .sel .nice-select {
+            border: none; }
+          .index-banner .beacon-ring .ui-select > div .sel select.wide {
+            width: 100%; }
+        .index-banner .beacon-ring .ui-select > div .search-btn {
+          flex-basis: 13%;
+          text-align: center;
+          text-transform: uppercase;
+          border: none;
+          background: transparent;
+          outline: none;
+          cursor: pointer;
+          transition: all 500ms; }
+          .index-banner .beacon-ring .ui-select > div .search-btn:hover {
+            color: #ff0096; }
+        @media (max-width: 43.75em) {
+          .index-banner .beacon-ring .ui-select > div {
+            padding: 15px 12px;
+            border-radius: 2px;
+            display: block; }
+            .index-banner .beacon-ring .ui-select > div .sel {
+              width: 100%;
+              min-height: 35px;
+              margin-bottom: 1rem; }
+            .index-banner .beacon-ring .ui-select > div .search-btn {
+              width: 100%;
+              border-top: 1px solid #f0f0f0;
+              padding-top: 15px; } }
+      @media (max-width: 60.625em) {
+        .index-banner .beacon-ring .ui-select {
+          padding: 0 3rem; } }
+      @media (max-width: 25em) {
+        .index-banner .beacon-ring .ui-select {
+          padding: 0 0.5rem; } }
+    @media (max-width: 25em) {
+      .index-banner .beacon-ring {
+        padding: 0 1rem 2rem 1rem; } }
 
 .ui-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  width: 100%;
   background: white;
   height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 3rem; }
+  padding: 0 3rem;
+  box-shadow: 0 5px 6px -3px rgba(0, 0, 0, 0.4); }
   .ui-menu .logo div {
     width: 40px;
     height: 40px;
@@ -133,26 +200,26 @@ body, h1, h2, h3, h4, h5, h6, input[type="text"], input[type="password"], input[
   height: 100%;
   z-index: 2000;
   background: white;
-  box-shadow: 2px 0 15px 1px gray;
+  box-shadow: 1px 0 15px -1px gray;
   transition: left 600ms; }
   .side-menu .side-logo {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
+    padding: 10px 2rem;
     background: whitesmoke;
     border-bottom: 1px solid lightgrey; }
     .side-menu .side-logo a {
       text-decoration: none;
       display: block;
-      width: 55px;
-      height: 55px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%; }
       .side-menu .side-logo a img {
         width: 100%;
         border-radius: inherit; }
   .side-menu .side-menu-c {
-    padding: 0; }
+    padding: 0;
+    position: relative;
+    left: 0; }
     .side-menu .side-menu-c li {
       list-style: none;
       margin: 0;
