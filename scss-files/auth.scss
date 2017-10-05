@@ -1,0 +1,143 @@
+.auth-wrapper{
+  width: 100%;
+  background: linear-gradient(to right, transparent, rgba(0,0,0,0.99)), url('../img/auth2.jpg');
+  background-size: 100% auto;
+  margin-top: 72px;
+  padding: 4rem 9rem;
+  display: flex;
+  justify-content: space-between;
+  .auth-form{
+    width: 380px;
+    //height: 500px;
+    background: white;
+    border-radius: 8px;
+    position: relative;
+    padding: 5rem 2.5rem;
+    margin-right: 4rem;
+    .ui-icon{
+      position: absolute;
+      top: -40px;
+      left: calc(50% - 45px);
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 4px 15px 1px lightgrey;
+      img{
+        width: 100%;
+        border-radius: inherit;
+      }
+    }
+    .forgot{
+      font-size: 0.88rem;
+      color: #1273ff;
+    }
+    .auth-switch{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 2rem 0 0 0;
+      em{
+        display: block;
+        width: 40%;
+        height: 1px;
+        background: lightgrey;
+      }
+      span{
+        font-size: 0.76rem;
+        display: block;
+        margin: 0.4rem;
+      }
+      a{
+        font:{
+          weight: 600;
+        }
+        color: #0f5af4;
+      }
+    }
+    .submit-btn{
+      position: absolute;
+      bottom: -30px;
+      left: calc(50% - 30px);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #4489e1;
+      box-shadow: 0 2px 15px 1px grey;
+      transition: all 600ms;
+      i{
+        color: whitesmoke;
+        transition: color 600ms;
+      }
+      &:hover{
+        background: white;
+        i{
+          color: #607d8b;
+        }
+      }
+    }
+    @include mq(550, max){
+      width: 100%;
+    }
+  }
+  .social-auth{
+    flex-basis: calc(100% - (380px + 4rem));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+    h4{
+      color: whitesmoke;
+    }
+    p{
+      color: whitesmoke;
+      text-align: center;
+    }
+    div{
+      a{
+        transition: all 500ms;
+        padding: 10px 30px;
+        i{
+          color: whitesmoke;
+          font-size: 1.4rem;
+        }
+        margin-right: 5px;
+        box-shadow: none;
+        &.tw{
+          background: rgb(0, 182, 241);
+          &:hover{
+            background: rgb(0, 169, 230);
+          }
+        }
+        &.fb{
+          background: rgb(59, 89, 152);
+          &:hover{
+            background: rgb(75, 103, 161);
+          }
+        }
+        &.gp{
+          background: rgb(223, 74, 50);
+          &:hover{
+            background: rgb(204, 59, 41);
+          }
+        }
+        &:hover{
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  @include mq(1114, max){
+    padding: 4rem 2rem;
+  }
+  @include mq(885, max){
+    display: block;
+    .auth-form{
+      margin: 0 auto;
+    }
+  }
+}

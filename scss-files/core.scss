@@ -1,6 +1,9 @@
 /**
  * Created by Jose Kim on 9/27/2017.
  */
+
+$boxshadow: rgba(37, 39, 89, 0.08) 0 8px 8px 0;
+
 body {
   background-color: #f2f6f8;
 }
@@ -11,7 +14,22 @@ body, h1, h2, h3, h4, h5, h6, input[type="text"], input[type="password"], input[
   color: #607d8b; }
 
 .ui-btn{
-
+  padding: 15px 30px;
+  border-radius: 2px;
+  background: #00a4ff;
+  box-shadow: 0 6px 25px -1px lightgrey;
+  color: white!important;
+  outline: none;
+  &:focus{
+    box-shadow: 0 6px 25px -2px lightgrey;
+  }
+  &:active{
+    box-shadow: 0 6px 25px -2px lightgrey;
+  }
+  &:hover{
+    box-shadow: 0 2px 15px -2px lightgrey;
+    color: whitesmoke;
+  }
 }
 
 .ui-container{
@@ -231,6 +249,19 @@ body, h1, h2, h3, h4, h5, h6, input[type="text"], input[type="password"], input[
 }
 
 
+.rating-stars{
+  i{
+    display: inline-block;
+    color: #ff8602;
+    font-size: 1.1rem;
+  }
+  span{
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 0.95rem;
+  }
+}
+
 
 /* -- footer -- */
 .footer {
@@ -421,3 +452,87 @@ label:hover:before {
   margin-right: 0; }
 
 /* -- end inputs -- */
+
+
+// INPUTS // ============================== //
+
+$bg-color: #424242;
+$hl-color: #2196F3;
+$muted-color: mix(white, $bg-color, 70%);
+$trans-time: 300ms;
+//$width: 320px;
+
+.group{
+  width: 100%;
+  position: relative;
+  margin: 1rem 0 1rem 0;
+  &.sep{
+    margin-bottom: 3rem;
+  }
+}
+textarea {
+  resize: none;
+}
+
+input,
+textarea {
+  background: none;
+  color: $muted-color;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid $muted-color;
+  &:focus {
+    outline: none;
+  }
+  &:focus ~ label,
+  &:valid ~ label {
+    top: -14px;
+    font-size: 12px;
+    color: $hl-color;
+  }
+  &:focus ~ .bar:before {
+    width: 100%;
+  }
+}
+
+input[type="password"] {
+  letter-spacing: 0.3em;
+}
+
+.m-label {
+  color: $muted-color;
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  left: 0;
+  top: 10px;
+  transition: $trans-time ease all;
+  .fa{
+    position: absolute;
+    right: 10px;
+    top: 0.3rem;
+    color: #90bbd0;
+  }
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: 100%;
+  &:before {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    background: $hl-color;
+    transition: $trans-time ease all;
+    left: 0;
+  }
+}
